@@ -1,0 +1,41 @@
+form{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 150%;
+    margin: 35px;
+    margin-left: 350px;
+    width: 400px;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: black;
+}
+.icon {
+    padding: 8px;
+    background: white;
+    color:black;
+    min-width: 50px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  .input_field
+  {
+    font-style: italic;
+    padding: 8px;
+    padding-top: 15px;
+    min-width: 25px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  button
+  {
+    background-color:goldenrod;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
