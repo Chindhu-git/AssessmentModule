@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { GradComponent } from './grad/grad.component';
 import { TrainerComponent } from './trainer/trainer.component';
+import { GradhomeComponent } from './gradhome/gradhome.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { TrainerComponent } from './trainer/trainer.component';
     LoginComponent,
     PagenotfoundComponent,
     GradComponent,
-    TrainerComponent
+    TrainerComponent,
+    GradhomeComponent
   ],
   imports: [
     BrowserModule,
