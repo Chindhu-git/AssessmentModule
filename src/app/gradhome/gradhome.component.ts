@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {GradComponent} from '/home/chindhu/assessmentProj/src/app/grad/grad.component';
 
 @Component({
   selector: 'app-gradhome',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GradhomeComponent implements OnInit {
 
+  email: String;
   constructor() { }
 
   ngOnInit(): void {
