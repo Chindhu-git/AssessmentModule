@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import {GradComponent} from './grad/grad.component';
 import {TrainerComponent} from './trainer/trainer.component';
+import {GradhomeComponent} from './gradhome/gradhome.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'login/grad', component: GradComponent },
   { path: 'login/trainer', component: TrainerComponent },
+  { path: 'login/grad/gradhome', component: GradhomeComponent},
   { path: '**', component: PagenotfoundComponent }
 ];
 

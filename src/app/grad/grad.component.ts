@@ -1,7 +1,9 @@
 import { Component, OnInit, SystemJsNgModuleLoader } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router} from '@angular/router';
 import { GradLogin } from './gradlogin';
 import { GradauthorisationService } from '../service/gradauthorisation.service';
+import { strict } from 'assert';
+import { stringify } from 'querystring';
 
 
 @Component({
@@ -24,5 +26,10 @@ export class GradComponent implements OnInit {
       console.log("hey world!");                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
       let resp=this.service.doGragLogin(this.gradlogin);
       resp.subscribe((data)=>this.message=data);
+      var comparison_string=new String("Authenticated");
+      if (this.message.localeCompare(comparison_string))
+      {
+          
+      }
   }
 }
