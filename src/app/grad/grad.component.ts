@@ -16,7 +16,7 @@ export class GradComponent implements OnInit {
   gradlogin: GradLogin=new GradLogin("","");
   message:any;
 
-  constructor(private service: GradauthorisationService){}
+  constructor(private service: GradauthorisationService, private router: Router){}
 
   ngOnInit(): void {
   }
@@ -25,11 +25,18 @@ export class GradComponent implements OnInit {
   {
       console.log("hey world!");                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
       let resp=this.service.doGragLogin(this.gradlogin);
-      resp.subscribe((data)=>this.message=data);
-      var comparison_string=new String("Authenticated");
-      if (this.message.localeCompare(comparison_string))
-      {
-          
-      }
+      resp.subscribe((data)=>{
+          console.log(data==="Authenticated");
+          if(data==="Authenticated")
+          {
+            console.log("ifpart"+data);
+            this.router.navigateByUrl('/login/grad/gradhome');
+          }
+          else 
+          {
+            console.log("elsepart"+data);
+            this.message=data;
+          }
+      });
   }
 }
