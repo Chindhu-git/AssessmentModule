@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {GradComponent} from '/home/chindhu/assessmentProj/src/app/grad/grad.component';
+import {GradComponent} from '../grad/grad.component';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-gradhome',
@@ -8,10 +9,13 @@ import {GradComponent} from '/home/chindhu/assessmentProj/src/app/grad/grad.comp
 })
 export class GradhomeComponent implements OnInit {
 
-  email: String;
-  constructor() { }
-
+  private gradComponent : GradComponent;
+  public email : String;
+  constructor() {
+   }
+   
   ngOnInit(): void {
+      this.email=sessionStorage.getItem('loggedUser');
   }
 
 }

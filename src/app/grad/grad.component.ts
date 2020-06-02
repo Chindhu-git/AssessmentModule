@@ -5,7 +5,6 @@ import { GradauthorisationService } from '../service/gradauthorisation.service';
 import { strict } from 'assert';
 import { stringify } from 'querystring';
 
-
 @Component({
   selector: 'app-grad',
   templateUrl: './grad.component.html',
@@ -15,26 +14,25 @@ export class GradComponent implements OnInit {
 
   gradlogin: GradLogin=new GradLogin("","");
   message:any;
+  public email : string;
 
-  constructor(private service: GradauthorisationService, private router: Router){}
+  constructor(private service: GradauthorisationService, private router: Router){
+  }
 
   ngOnInit(): void {
   }
 
   public gradLoginNow()
-  {
-      console.log("hey world!");                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
       let resp=this.service.doGragLogin(this.gradlogin);
       resp.subscribe((data)=>{
-          console.log(data==="Authenticated");
           if(data==="Authenticated")
           {
-            console.log("ifpart"+data);
+            sessionStorage.setItem('loggedUser', this.gradlogin.email);
             this.router.navigateByUrl('/login/grad/gradhome');
           }
           else 
           {
-            console.log("elsepart"+data);
             this.message=data;
           }
       });
