@@ -15,6 +15,8 @@ import { GradhomeComponent } from './gradhome/gradhome.component';
 import { GradprofileComponent } from './gradprofile/gradprofile.component';
 import { TrainerhomeComponent } from './trainerhome/trainerhome.component';
 import { TrainerprofileComponent } from './trainerprofile/trainerprofile.component';
+import { TrainerassignmentsComponent } from './trainerassignments/trainerassignments.component';
+import { GradassignmentsComponent } from './gradassignments/gradassignments.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { TrainerprofileComponent } from './trainerprofile/trainerprofile.compone
     GradhomeComponent,
     GradprofileComponent,
     TrainerhomeComponent,
-    TrainerprofileComponent
+    TrainerprofileComponent,
+    TrainerassignmentsComponent,
+    GradassignmentsComponent
   ],
   imports: [
     BrowserModule,

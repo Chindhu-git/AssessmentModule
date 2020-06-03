@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TrainerhomeComponent implements OnInit {
 
+  public email : String;
   constructor() { }
 
   ngOnInit(): void {
+    this.email=sessionStorage.getItem('loggedTrainer');
   }
 
 }

@@ -1,1 +1,20 @@
-<p>trainerhome works!</p>
+
+    <script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"> </script>
+
+    <p id="welcomenote">Welcome {{email}} !!!</p>
+    <div class="navbar">
+      <a class="pagename" style="font-size:150%">Trainer</a>
+      <a routerLink="/home" routerLinkActive="active" style="float: right;">Logout</a>
+      <a style="float: right;">View Performance</a>
+      <a style="float: right;">Projects</a>
+      <a style="float: right;">Assignments</a>
+      <a style="float: right;">Quiz</a>
+      <a routerLink="/login/trainer/trainerprofile" routerLinkActive="active" style="float: right;">Profile</a>
+    </div>  
+    <div>
+      <img src="assets/assessment_img.jpg" alt="Workplace">
+      <p>Assessments<br>
+        play a greater<br>
+        part in building<br>
+        an expert</p>
+    </div>
