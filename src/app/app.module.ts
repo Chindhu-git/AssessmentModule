@@ -13,6 +13,8 @@ import { TrainerComponent } from './trainer/trainer.component';
 import { GradauthorisationService } from './service/gradauthorisation.service';
 import { GradhomeComponent } from './gradhome/gradhome.component';
 import { GradprofileComponent } from './gradprofile/gradprofile.component';
+import { TrainerhomeComponent } from './trainerhome/trainerhome.component';
+import { TrainerprofileComponent } from './trainerprofile/trainerprofile.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { GradprofileComponent } from './gradprofile/gradprofile.component';
     GradComponent,
     TrainerComponent,
     GradhomeComponent,
-    GradprofileComponent
+    GradprofileComponent,
+    TrainerhomeComponent,
+    TrainerprofileComponent
   ],
   imports: [
     BrowserModule,

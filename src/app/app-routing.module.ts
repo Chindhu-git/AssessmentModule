@@ -7,6 +7,8 @@ import {GradComponent} from './grad/grad.component';
 import {TrainerComponent} from './trainer/trainer.component';
 import {GradhomeComponent} from './gradhome/gradhome.component';
 import {GradprofileComponent} from './gradprofile/gradprofile.component';
+import {TrainerhomeComponent} from './trainerhome/trainerhome.component';
+import {TrainerprofileComponent} from './trainerprofile/trainerprofile.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -16,6 +18,8 @@ const routes: Routes = [
   { path: 'login/trainer', component: TrainerComponent },
   { path: 'login/grad/gradhome', component: GradhomeComponent},
   { path: 'login/grad/gradprofile', component: GradprofileComponent},
+  { path: 'login/trainer/trainerhome', component: TrainerhomeComponent},
+  { path: 'login/trainer/trainerprofile', component: TrainerprofileComponent},
   { path: '**', component: PagenotfoundComponent }
 ];
 
