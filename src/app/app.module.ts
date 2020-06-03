@@ -12,6 +12,7 @@ import { GradComponent } from './grad/grad.component';
 import { TrainerComponent } from './trainer/trainer.component';
 import { GradauthorisationService } from './service/gradauthorisation.service';
 import { GradhomeComponent } from './gradhome/gradhome.component';
+import { GradprofileComponent } from './gradprofile/gradprofile.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { GradhomeComponent } from './gradhome/gradhome.component';
     PagenotfoundComponent,
     GradComponent,
     TrainerComponent,
-    GradhomeComponent
+    GradhomeComponent,
+    GradprofileComponent
   ],
   imports: [
     BrowserModule,
