@@ -15,6 +15,14 @@
             <a style="float: right;">Assignments</a>
             <a style="float: right;">Quiz</a>
             <a routerLink="/login/trainer/trainerprofile" routerLinkActive="active" style="float: right;">Profile</a>
-        </div>  
+        </div>  <br>
+        <button type="button" routerLink="/login/trainer/trainerassignments/create" routerLinkActive="active">Create new assignment</button><br>
+        <br>
+        <ag-grid-angular
+            style="width: 500px; height: 200px;"
+            class="ag-theme-alpine"
+            [rowData]="rowData"
+            [columnDefs]="columnDefs">
+        </ag-grid-angular>
     </body>
 </html>

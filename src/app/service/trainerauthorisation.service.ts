@@ -21,4 +21,8 @@ export class TrainerauthorisationService {
   {
     return this.http.post("http://localhost:8080/login/trainer/profile/profilelist",email,{responseType: 'text'});
   }
+  public saveAssignments(createassignment)
+  {
+    return this.http.post("http://localhost:8080/login/trainer/assignment/create",createassignment,{responseType: 'text' as 'json'});
+  }
 }

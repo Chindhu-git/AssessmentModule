@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
+import { AgGridModule } from 'ag-grid-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,8 @@ import { TrainerhomeComponent } from './trainerhome/trainerhome.component';
 import { TrainerprofileComponent } from './trainerprofile/trainerprofile.component';
 import { TrainerassignmentsComponent } from './trainerassignments/trainerassignments.component';
 import { GradassignmentsComponent } from './gradassignments/gradassignments.component';
+import { TrainerauthorisationService } from './service/trainerauthorisation.service';
+import { CreateassignmentComponent } from './createassignment/createassignment.component';
 
 @NgModule({
   declarations: [
@@ -31,15 +34,18 @@ import { GradassignmentsComponent } from './gradassignments/gradassignments.comp
     TrainerhomeComponent,
     TrainerprofileComponent,
     TrainerassignmentsComponent,
-    GradassignmentsComponent
+    GradassignmentsComponent,
+    CreateassignmentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AgGridModule.withComponents([])
+
   ],
-  providers: [GradauthorisationService],
+  providers: [GradauthorisationService,TrainerauthorisationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
