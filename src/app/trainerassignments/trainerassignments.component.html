@@ -19,10 +19,13 @@
         <button type="button" routerLink="/login/trainer/trainerassignments/create" routerLinkActive="active">Create new assignment</button><br>
         <br>
         <ag-grid-angular
-            style="width: 500px; height: 200px;"
+            #mygrid
+            style="width: 100%; height: 300px;"
             class="ag-theme-alpine"
             [rowData]="rowData"
-            [columnDefs]="columnDefs">
+            [columnDefs]="columnDefs"
+            rowSelection="single"
+            >
         </ag-grid-angular>
     </body>
 </html>
