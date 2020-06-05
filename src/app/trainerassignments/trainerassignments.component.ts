@@ -29,17 +29,19 @@ export class TrainerassignmentsComponent implements OnInit {
   public showAssignments()
   {
     let resp=this.service.showAssignments(this.email);
-    resp.subscribe((data :any[])=>{
-      console.log(data);
+    resp.subscribe((data: any[])=>{
+      console.log(data[0]);
+      console.log(data[1]);
       this.trainerAssignments=data;
-      
       for(let trainerAssignment of this.trainerAssignments)
       {
           this.addrow["email"]=trainerAssignment.email;
+          console.log(trainerAssignment.email);
           this.addrow["title"]=trainerAssignment.title;
+          console.log(trainerAssignment.title);
           this.addrow["description"]=trainerAssignment.description;
+          console.log(trainerAssignment.description);
           this.rowData=this.rowData.concat(this.addrow);
-          console.log(this.rowData);
           this.addrow={};
       }
       this.columnDefs = [
