@@ -21,6 +21,7 @@ import { GradassignmentsComponent } from './gradassignments/gradassignments.comp
 import { TrainerauthorisationService } from './service/trainerauthorisation.service';
 import { CreateassignmentComponent } from './createassignment/createassignment.component';
 import { ViewsubmissionComponent } from './viewsubmission/viewsubmission.component';
+import { SubmitassignmentsComponent } from './submitassignments/submitassignments.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ViewsubmissionComponent } from './viewsubmission/viewsubmission.compone
     TrainerassignmentsComponent,
     GradassignmentsComponent,
     CreateassignmentComponent,
-    ViewsubmissionComponent
+    ViewsubmissionComponent,
+    SubmitassignmentsComponent
   ],
   imports: [
     BrowserModule,

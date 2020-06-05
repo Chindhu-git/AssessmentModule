@@ -13,6 +13,7 @@ import {TrainerassignmentsComponent} from './trainerassignments/trainerassignmen
 import {GradassignmentsComponent} from './gradassignments/gradassignments.component';
 import {CreateassignmentComponent} from './createassignment/createassignment.component';
 import {ViewsubmissionComponent} from './viewsubmission/viewsubmission.component';
+import {SubmitassignmentsComponent} from './submitassignments/submitassignments.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'login/grad/gradassignments', component: GradassignmentsComponent},
   { path: 'login/trainer/trainerassignments/create', component: CreateassignmentComponent},
   { path: 'login/trainer/trainerassignments/view', component: ViewsubmissionComponent},
+  { path: 'login/grad/gradassignments/submit', component: SubmitassignmentsComponent},
   { path: '**', component: PagenotfoundComponent }
 ];
 

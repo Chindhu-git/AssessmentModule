@@ -28,7 +28,7 @@ export class TrainerassignmentsComponent implements OnInit {
   }
   public showAssignments()
   {
-    let resp=this.service.showAssignments();
+    let resp=this.service.showAssignments(this.email);
     resp.subscribe((data :any[])=>{
       console.log(data);
       this.trainerAssignments=data;
@@ -39,6 +39,7 @@ export class TrainerassignmentsComponent implements OnInit {
           this.addrow["title"]=trainerAssignment.title;
           this.addrow["description"]=trainerAssignment.description;
           this.rowData=this.rowData.concat(this.addrow);
+          console.log(this.rowData);
           this.addrow={};
       }
       this.columnDefs = [

@@ -20,4 +20,8 @@ export class GradauthorisationService {
   {
     return this.http.post("http://localhost:8080/login/grad/profile/profilelist",email,{responseType: 'text'});
   }
+  public showAssignments()
+  {
+    return this.http.get<any>("http://localhost:8080/login/grad/assignment/show");
+  }
 }
