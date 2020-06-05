@@ -4,6 +4,9 @@ import {TrainerAssignments} from './trainerassignments';
 import { Router} from '@angular/router';
 import { NgForOf } from '@angular/common';
 
+import {HttpClientModule} from '@angular/common/http';
+import { GridOptionsWrapper } from 'ag-grid-community';
+
 @Component({
   selector: 'app-trainerassignments',
   templateUrl: './trainerassignments.component.html',
@@ -45,5 +48,14 @@ export class TrainerassignmentsComponent implements OnInit {
       ];
     });
   }
-
+  public onRowClicked(event)
+  {
+    console.log(event.data.email);  
+    console.log(event.data.title);
+    console.log(event.data.description);
+    sessionStorage.setItem('loggedEmail', event.data.email);
+    sessionStorage.setItem('loggedTitle', event.data.title);
+    sessionStorage.setItem('loggedDescription', event.data.description);
+    this.router.navigateByUrl('/login/trainer/trainerassignments/view');
+  }
 }

@@ -1,0 +1,60 @@
+#welcomenote{
+    color: #daa520;
+    font-size: 100%;
+    font-family: none;
+    font-variant: none;
+    font-style: italic;
+    top: 25px;
+    font-weight: bold;
+    text-align: right;
+    left: 1000px;
+  }
+  .navbar {
+      overflow: hidden;
+      background-color: #333;
+      position: relative;
+      top: 100;
+      width: 100%;
+    }
+  .navbar a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 20px;
+      font-style: italic;
+    }
+  .navbar a:hover {
+      background: #ddd;
+      color: black;
+    }
+  h4
+  {
+    text-align: center;
+    font-variant: small-caps;
+    font-size: 150%;
+  }
+  p
+  {
+      text-align: center;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-variant: none;
+      font-style: italic;
+      font-size: 100%;
+      font-weight: none;
+      color:black;
+  }
+  button {
+    background-color: goldenrod; /* Green */
+    border: none;
+    border-radius:12px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  
