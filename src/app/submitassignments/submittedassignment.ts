@@ -1,9 +1,9 @@
 export class SubmittedAssignment
 {
     email: string;
-    submittedass: Buffer;
+    submittedass: string;
     constructor(
         email:string,
-        submittedass:Buffer
+        submittedass:string
     ){}
 }
