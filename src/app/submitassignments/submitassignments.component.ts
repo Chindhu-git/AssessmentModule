@@ -8,12 +8,14 @@ import {SubmittedAssignment} from './submittedassignment'
 export class SubmitassignmentsComponent implements OnInit {
 
   public email: string;
+  public posted_by:string;
   public title: string;
   public description: string;
   constructor() { }
 
   ngOnInit(): void {
-    this.email=sessionStorage.getItem('loggedEmail');
+    this.email=sessionStorage.getItem('loggedUser');
+    this.posted_by=sessionStorage.getItem('loggedEmail');
     this.title=sessionStorage.getItem('loggedTitle');
     this.description=sessionStorage.getItem('loggedDescription');
   }
