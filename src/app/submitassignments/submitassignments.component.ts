@@ -16,7 +16,7 @@ export class SubmitassignmentsComponent implements OnInit {
   public description: string;
   private message :any;
 
-  submittedassignment: SubmittedAssignment =new SubmittedAssignment("",undefined);
+  submittedassignment: SubmittedAssignment =new SubmittedAssignment("","",undefined);
   constructor(private service: GradauthorisationService, private router: Router) { }
 
   ngOnInit(): void {
@@ -28,9 +28,18 @@ export class SubmitassignmentsComponent implements OnInit {
   public uploadNow()
   {
       this.submittedassignment.email=this.email;
+      this.submittedassignment.assignment_name=this.title;
       let resp=this.service.uploadNow(this.submittedassignment);
       resp.subscribe((data)=>{
+        this.message=data;
+        /*if(data==="Upload Successfull")
+        {
           this.message=data;
+        }
+        else
+        {
+          this.message=data;
+        }*/
     });
   }
 
