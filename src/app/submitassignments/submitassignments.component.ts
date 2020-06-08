@@ -14,7 +14,7 @@ export class SubmitassignmentsComponent implements OnInit {
   public posted_by: string;
   public title: string;
   public description: string;
-  public message :string;
+  private message :any;
 
   submittedassignment: SubmittedAssignment =new SubmittedAssignment("",undefined);
   constructor(private service: GradauthorisationService, private router: Router) { }
@@ -30,10 +30,7 @@ export class SubmitassignmentsComponent implements OnInit {
       this.submittedassignment.email=this.email;
       let resp=this.service.uploadNow(this.submittedassignment);
       resp.subscribe((data)=>{
-        if(data==="Uploaded Successfull")
-        {
           this.message=data;
-        }
     });
   }
 
