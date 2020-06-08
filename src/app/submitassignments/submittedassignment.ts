@@ -1,9 +1,9 @@
 export class SubmittedAssignment
 {
     email: string;
-    submittedass: string;
+    uploadfile: any;
     constructor(
         email:string,
-        submittedass:string
+        uploadfile: any
     ){}
 }

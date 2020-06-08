@@ -24,4 +24,8 @@ export class GradauthorisationService {
   {
     return this.http.get<any>("http://localhost:8080/login/grad/assignment/show");
   }
+  public uploadNow(submittedassignment)
+  {
+    return this.http.post("http://localhost:8080/login/grad/assignment/submit",submittedassignment,{responseType:'text' as 'json'});
+  }
 }
