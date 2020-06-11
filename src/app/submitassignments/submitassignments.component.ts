@@ -14,7 +14,7 @@ export class SubmitassignmentsComponent implements OnInit {
   public posted_by: string;
   public title: string;
   public description: string;
-  private message :any;
+  public message :any;
 
   submittedassignment: SubmittedAssignment =new SubmittedAssignment("","",undefined);
   constructor(private service: GradauthorisationService, private router: Router) { }
