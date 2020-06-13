@@ -16,7 +16,7 @@ export class SubmitassignmentsComponent implements OnInit {
   public description: string;
   public message :any;
 
-  submittedassignment: SubmittedAssignment =new SubmittedAssignment("","",undefined);
+  submittedassignment: SubmittedAssignment =new SubmittedAssignment("","","",undefined);
   constructor(private service: GradauthorisationService, private router: Router) { }
 
   ngOnInit(): void {
@@ -25,6 +25,12 @@ export class SubmitassignmentsComponent implements OnInit {
     this.title=sessionStorage.getItem('loggedTitle');
     this.description=sessionStorage.getItem('loggedDescription');
   }
+  onFileSelected(event) {
+    if(event.target.files.length > 0) 
+     {
+       this.submittedassignment.filename= event.target.files[0].name;
+     }
+   }
   public uploadNow()
   {
       this.submittedassignment.email=this.email;

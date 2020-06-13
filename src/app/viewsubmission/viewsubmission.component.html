@@ -12,3 +12,14 @@
 <h4>{{title}}</h4>
 <p>Posted By:{{email}}</p>
 <p>Description:{{description}}</p>
+<br>
+<ag-grid-angular
+    #mygrid
+    style="width: 600px; height: 300px;"
+    class="ag-theme-alpine"
+    [rowData]="rowData"
+    [columnDefs]="columnDefs"
+    rowSelection="single"
+    (rowClicked)="onRowClicked($event)"
+    >
+</ag-grid-angular>
