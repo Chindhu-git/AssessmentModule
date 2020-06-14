@@ -29,5 +29,9 @@ export class TrainerauthorisationService {
   {
     return this.http.get<any>("http://localhost:8080/login/trainer/assignment/show/"+email);
   }
+  public viewAssignments(assignment_name:string)
+  {
+    return this.http.get<any>("http://localhost:8080/login/trainer/assignment/view/"+assignment_name); 
+  }
 }
  
