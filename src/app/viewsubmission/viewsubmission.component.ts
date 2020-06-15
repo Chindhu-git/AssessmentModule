@@ -38,7 +38,7 @@ export class ViewsubmissionComponent implements OnInit {
       {
           this.addrow["grademail"]=viewSubmission.grademail;
           this.addrow["filename"]=viewSubmission.filename;
-          this.addrow["uploadedfile"]=viewSubmission.uploadedfile;
+          this.addrow["submittedass"]=viewSubmission.submittedass;
           if(viewSubmission.score==-1)
             this.addrow["score"]="Not Yet Graded";
           else if(viewSubmission.score>0)
@@ -49,7 +49,7 @@ export class ViewsubmissionComponent implements OnInit {
       this.columnDefs = [
         {headerName: 'Submitted By', field: 'grademail' },
         {headerName: 'Filename', field: 'filename' },
-        {headerName: 'Uploaded File', field: 'uploadedfile'},
+        {headerName: 'Uploaded File', field: 'submittedass'},
         {headerName: 'Score', field: 'score' },
       ];
     });
@@ -59,7 +59,7 @@ export class ViewsubmissionComponent implements OnInit {
     console.log("row clicked");
     sessionStorage.setItem('UploadedEmail', event.data.grademail);
     sessionStorage.setItem('UploadedFileName', event.data.filename);
-    sessionStorage.setItem('UploadedFile', event.data.uploadedfile);
+    sessionStorage.setItem('UploadedFile', event.data.submittedass);
     sessionStorage.setItem('UploadedScore', event.data.score);
     this.router.navigateByUrl('/login/trainer/trainerassignments/view/evaluate');
   }
