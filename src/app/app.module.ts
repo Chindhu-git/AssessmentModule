@@ -22,6 +22,7 @@ import { TrainerauthorisationService } from './service/trainerauthorisation.serv
 import { CreateassignmentComponent } from './createassignment/createassignment.component';
 import { ViewsubmissionComponent } from './viewsubmission/viewsubmission.component';
 import { SubmitassignmentsComponent } from './submitassignments/submitassignments.component';
+import { EvaluatesubmissionComponent } from './evaluatesubmission/evaluatesubmission.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { SubmitassignmentsComponent } from './submitassignments/submitassignment
     GradassignmentsComponent,
     CreateassignmentComponent,
     ViewsubmissionComponent,
-    SubmitassignmentsComponent
+    SubmitassignmentsComponent,
+    EvaluatesubmissionComponent
   ],
   imports: [
     BrowserModule,

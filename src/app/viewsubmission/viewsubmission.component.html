@@ -1,3 +1,9 @@
+<head>
+    <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css">
+    <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-theme-alpine.css">
+</head>
+<body>
 <p id="welcomenote">Welcome {{email}} !!!</p>
 <div class="navbar">
     <a class="pagename" style="font-size:150%">Trainer</a>
@@ -15,11 +21,11 @@
 <br>
 <ag-grid-angular
     #mygrid
-    style="width: 600px; height: 300px;"
+    style="width: 900px; height: 300px;"
     class="ag-theme-alpine"
     [rowData]="rowData"
     [columnDefs]="columnDefs"
     rowSelection="single"
-    (rowClicked)="onRowClicked($event)"
-    >
+    (rowClicked)="onRowClicked($event)">
 </ag-grid-angular>
+</body>

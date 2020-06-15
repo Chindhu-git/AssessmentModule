@@ -57,6 +57,11 @@ export class ViewsubmissionComponent implements OnInit {
   public onRowClicked(event)
   {
     console.log("row clicked");
+    sessionStorage.setItem('UploadedEmail', event.data.grademail);
+    sessionStorage.setItem('UploadedFileName', event.data.filename);
+    sessionStorage.setItem('UploadedFile', event.data.uploadedfile);
+    sessionStorage.setItem('UploadedScore', event.data.score);
+    this.router.navigateByUrl('/login/trainer/trainerassignments/view/evaluate');
   }
 
 }

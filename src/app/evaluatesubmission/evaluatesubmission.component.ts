@@ -1,0 +1,27 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-evaluatesubmission',
+  templateUrl: './evaluatesubmission.component.html',
+  styleUrls: ['./evaluatesubmission.component.css']
+})
+export class EvaluatesubmissionComponent implements OnInit {
+
+  public email: string;
+  public title: string;
+  public grademail: string;
+  public filename: string;
+  public uploadedfile: any;
+  public score: any;
+  constructor() { }
+
+  ngOnInit(): void {
+    this.email=sessionStorage.getItem('loggedEmail');
+    this.title=sessionStorage.getItem('loggedTitle');
+    this.grademail=sessionStorage.getItem('UploadedEmail');
+    this.filename=sessionStorage.getItem('UploadedFileName');
+    this.uploadedfile=sessionStorage.getItem('UploadedFile');
+    this.score=sessionStorage.getItem('UploadedScore');
+  }
+
+}

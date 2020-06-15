@@ -14,6 +14,7 @@ import {GradassignmentsComponent} from './gradassignments/gradassignments.compon
 import {CreateassignmentComponent} from './createassignment/createassignment.component';
 import {ViewsubmissionComponent} from './viewsubmission/viewsubmission.component';
 import {SubmitassignmentsComponent} from './submitassignments/submitassignments.component';
+import {EvaluatesubmissionComponent} from './evaluatesubmission/evaluatesubmission.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -30,6 +31,7 @@ const routes: Routes = [
   { path: 'login/trainer/trainerassignments/create', component: CreateassignmentComponent},
   { path: 'login/trainer/trainerassignments/view', component: ViewsubmissionComponent},
   { path: 'login/grad/gradassignments/submit', component: SubmitassignmentsComponent},
+  { path: 'login/trainer/trainerassignments/view/evaluate', component: EvaluatesubmissionComponent},
   { path: '**', component: PagenotfoundComponent }
 ];
 
