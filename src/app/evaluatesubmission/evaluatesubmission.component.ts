@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { saveAs } from 'file-saver';
+
 
 @Component({
   selector: 'app-evaluatesubmission',
@@ -22,6 +24,10 @@ export class EvaluatesubmissionComponent implements OnInit {
     this.filename=sessionStorage.getItem('UploadedFileName');
     this.uploadedfile=sessionStorage.getItem('UploadedFile');
     this.score=sessionStorage.getItem('UploadedScore');
+
+    const file = new Blob([this.uploadedfile], {type: 'text/plain'});
+    saveAs(file,this.filename);
+
   }
 
 }
