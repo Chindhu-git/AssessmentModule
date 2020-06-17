@@ -2,6 +2,7 @@
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel=“stylesheet” href=“https://use.fontawesome.com/releases/v5.5.0/css/all.css” integrity=“sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU” crossorigin=“anonymous”>
 </head>
 <body>
     <p id="welcomenote">Welcome {{email}} !!!</p>
@@ -22,6 +23,7 @@
             <button class="buttons" (click)="downloadNow()">Download</button>
             <p>Score: <input type="text" name="score" value={{score}} readonly></p>
             <i class='fas fa-edit'></i>
+            <fa-icon [icon]="faCoffee"></fa-icon>
             <button class="buttons" type="button">Save</button>
             <br><br>
         </form>

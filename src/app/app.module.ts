@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { AgGridModule } from 'ag-grid-angular';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -48,6 +49,7 @@ import { EvaluatesubmissionComponent } from './evaluatesubmission/evaluatesubmis
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    FontAwesomeModule,
     AgGridModule.withComponents([])
 
   ],
