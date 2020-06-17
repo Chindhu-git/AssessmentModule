@@ -25,7 +25,8 @@ export class EvaluatesubmissionComponent implements OnInit {
     this.uploadedfile=sessionStorage.getItem('UploadedFile');
     this.score=sessionStorage.getItem('UploadedScore');
 
-    const file = new Blob([this.uploadedfile], {type: 'application/pdf'});
+    var blob = new Blob([this.uploadedfile], {type: 'application/pdf'});
+    var file = new File([blob], this.filename, {type: 'application/pdf', lastModified: Date.now()});  
     saveAs(file,this.filename);
 
   }
