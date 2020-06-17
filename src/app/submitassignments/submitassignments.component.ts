@@ -29,7 +29,7 @@ export class SubmitassignmentsComponent implements OnInit {
     if(event.target.files.length > 0) 
      {
        this.submittedassignment.filename= event.target.files[0].name;
-       console.log(event.target.files[0].mozFullPath);
+       console.dir(event.target.files[0]);
      }
    }
   public uploadNow()
