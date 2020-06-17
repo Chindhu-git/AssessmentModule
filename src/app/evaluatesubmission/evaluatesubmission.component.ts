@@ -15,7 +15,8 @@ export class EvaluatesubmissionComponent implements OnInit {
   public filename: string;
   public uploadedfile: any;
   public score: any;
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
     this.email=sessionStorage.getItem('loggedEmail');

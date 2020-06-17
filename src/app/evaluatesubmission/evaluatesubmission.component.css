@@ -46,7 +46,7 @@
       font-weight: none;
       color:black;
   }
-  button {
+  .buttons {
     background-color: goldenrod; /* Green */
     border: none;
     border-radius:12px;
