@@ -35,6 +35,7 @@ export class SubmitassignmentsComponent implements OnInit {
   {
       this.submittedassignment.email=this.email;
       this.submittedassignment.assignment_name=this.title;
+      //this.submittedassignment.uploadfile=Convert.FromBase64String(this.submittedassignment.uploadfile);
       let resp=this.service.uploadNow(this.submittedassignment);
       resp.subscribe((data)=>{
         this.message=data;
