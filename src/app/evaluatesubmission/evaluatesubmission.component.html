@@ -17,9 +17,10 @@
             <h5>{{title}}</h5>
             <p>Submitted By: {{grademail}}</p>
             <p>Filename: {{filename}}</p>
-            <button>Download</button>
-            <p>Score: {{score}}</p>
-            <button type="button">Edit <i class='fas fa-edit'></i></button><button type="button">Save</button>
+            <button (click)="downloadNow()">Download</button>
+            <p>Score: <input type="text" name="score" value={{score}} readonly> </p>
+            <button type="button"><i class='fas fa-edit'></i></button>
+            <button type="button">Save</button>
             <br><br>
         </form>
     </div>
