@@ -19,7 +19,7 @@
   <form>
     <h5>Upload File</h5>
     <p style="font-style: normal; font-size: 70%;">Maximum Upload size 50MB</p><br>
-    <input type="file" id="myFile" name="filename" style="text-align: center;" [(ngModel)]="submittedassignment.uploadfile" required (change)="onFileSelected($event)"><br><br>
+    <input type="file" id="myFile" name="filename" style="text-align: center;" required (change)="onFileSelected($event)"><br><br>
     <button type="submit" (click)="uploadNow()" >Upload</button><br><br>
   </form>    
 </div>
