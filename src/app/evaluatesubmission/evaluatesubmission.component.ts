@@ -17,13 +17,6 @@ export class EvaluatesubmissionComponent implements OnInit {
   public score: any;
   constructor() { }
 
-  public bin2string(array){
-    var result = "";
-    for(var i = 0; i < array.length; ++i){
-      result+= (String.fromCharCode(array[i]));
-    }
-    return result;
-  }
   ngOnInit(): void {
     this.email=sessionStorage.getItem('loggedEmail');
     this.title=sessionStorage.getItem('loggedTitle');
@@ -32,12 +25,7 @@ export class EvaluatesubmissionComponent implements OnInit {
     this.uploadedfile=sessionStorage.getItem('UploadedFile');
     this.score=sessionStorage.getItem('UploadedScore');
 
-    var blob = new Blob([this.uploadedfile], {type: 'text'});
-    var reader = new FileReader();
-    reader.onload = function() {
-      alert(reader.result);
-    }
-    reader.readAsText(blob);
+    var blob = new Blob([this.uploadedfile], {type: 'text/plain'});
     //var file = new File([blob], this.filename, {type: 'application/pdf', lastModified: Date.now()});  
     saveAs(blob,this.filename);
 
