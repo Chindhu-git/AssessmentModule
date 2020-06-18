@@ -25,11 +25,22 @@ export class EvaluatesubmissionComponent implements OnInit {
     this.filename=sessionStorage.getItem('UploadedFileName');
     this.uploadedfile=sessionStorage.getItem('UploadedFile');
     this.score=sessionStorage.getItem('UploadedScore');
+    (<HTMLInputElement> document.getElementById('savebtn')).disabled=true;
   }
   public downloadNow()
   {
     var blob = new Blob([this.uploadedfile], {type: 'text/plain'});
     saveAs(blob,this.filename);
+  }
+  public editNow()
+  {
+     document.getElementById('myscore').contentEditable="true";
+     (<HTMLInputElement> document.getElementById('savebtn')).disabled=false;
+  }
+  public saveNow()
+  {
+    document.getElementById('myscore').contentEditable="false";
+    console.log(document.getElementById('myscore').nodeValue);
   }
 
 }
