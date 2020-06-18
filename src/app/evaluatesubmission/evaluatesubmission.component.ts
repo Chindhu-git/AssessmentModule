@@ -32,9 +32,10 @@ export class EvaluatesubmissionComponent implements OnInit {
     var blob = new Blob([this.uploadedfile], {type: 'text/plain'});
     saveAs(blob,this.filename);
   }
-  public editNow()
+  public editNow(myscore: string)
   {
-     document.getElementById('myscore').contentEditable="true";
+    console.log(myscore);
+     //document.getElementById("myscore").contentEditable="true";
      (<HTMLInputElement> document.getElementById('savebtn')).disabled=false;
   }
   public saveNow()
