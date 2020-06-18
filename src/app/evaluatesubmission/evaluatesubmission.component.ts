@@ -15,6 +15,7 @@ export class EvaluatesubmissionComponent implements OnInit {
   public filename: string;
   public uploadedfile: any;
   public score: any;
+  private isReadOnly: boolean;
   constructor() {
   }
 
@@ -25,6 +26,7 @@ export class EvaluatesubmissionComponent implements OnInit {
     this.filename=sessionStorage.getItem('UploadedFileName');
     this.uploadedfile=sessionStorage.getItem('UploadedFile');
     this.score=sessionStorage.getItem('UploadedScore');
+    this.isReadOnly=true;
     (<HTMLInputElement> document.getElementById('savebtn')).disabled=true;
   }
   public downloadNow()
@@ -35,6 +37,7 @@ export class EvaluatesubmissionComponent implements OnInit {
   public editNow(myscore: string)
   {
     console.log(myscore);
+    this.isReadOnly=false;
      //document.getElementById("myscore").contentEditable="true";
      (<HTMLInputElement> document.getElementById('savebtn')).disabled=false;
   }
