@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { saveAs } from 'file-saver';
-
+import {EvaluateSubmission} from './evaluatesubmission';
+import {TrainerauthorisationService} from '../service/trainerauthorisation.service';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-evaluatesubmission',
@@ -15,8 +17,10 @@ export class EvaluatesubmissionComponent implements OnInit {
   public filename: string;
   public uploadedfile: any;
   public score: any;
-  private isReadOnly: boolean;
-  constructor() {
+  public message: any;
+  public isReadOnly: boolean;
+  evaluateSubmission: EvaluateSubmission=new EvaluateSubmission("","",-1);
+  constructor(private service: TrainerauthorisationService, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -27,7 +31,6 @@ export class EvaluatesubmissionComponent implements OnInit {
     this.uploadedfile=sessionStorage.getItem('UploadedFile');
     this.score=sessionStorage.getItem('UploadedScore');
     this.isReadOnly=true;
-    (<HTMLInputElement> document.getElementById('savebtn')).disabled=true;
   }
   public downloadNow()
   {
@@ -38,13 +41,25 @@ export class EvaluatesubmissionComponent implements OnInit {
   {
     console.log(myscore);
     this.isReadOnly=false;
-     //document.getElementById("myscore").contentEditable="true";
-     (<HTMLInputElement> document.getElementById('savebtn')).disabled=false;
   }
-  public saveNow()
+  public saveNow(myscore:string)
   {
-    document.getElementById('myscore').contentEditable="false";
-    console.log(document.getElementById('myscore').nodeValue);
+    this.isReadOnly=true;
+    if(myscore!=="Not Yet Graded")
+    {
+      this.score=Number(myscore);
+      if(this.score>-1)
+      {
+        this.evaluateSubmission.grademail=this.grademail;
+        this.evaluateSubmission.assignment_name=this.title;
+        this.evaluateSubmission.score=this.score;
+        let resp=this.service.evaluateAssignments(this.evaluateSubmission);
+        resp.subscribe((data)=>{
+          this.message=data;
+        });
+      }
+    }
+    
   }
 
 }

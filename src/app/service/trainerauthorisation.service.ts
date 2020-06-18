@@ -33,5 +33,9 @@ export class TrainerauthorisationService {
   {
     return this.http.get<any>("http://localhost:8080/login/trainer/assignment/view/"+assignment_name); 
   }
+  public evaluateAssignments(evaluatesubmission)
+  {
+    return this.http.post("http://localhost:8080/login/trainer/assignment/evaluate",evaluatesubmission,{responseType: 'text' as 'json'});
+  }
 }
  
