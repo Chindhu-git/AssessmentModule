@@ -27,7 +27,7 @@ export class CreateprojectComponent implements OnInit {
     resp.subscribe((data)=>{
       if(data==="Saved Successfully")
       {
-        this.router.navigateByUrl('/login/trainer/trainerProjects');
+        this.router.navigateByUrl('/login/trainer/trainerprojects');
       }
       else 
       {
