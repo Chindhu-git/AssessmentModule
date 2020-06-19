@@ -24,6 +24,9 @@ import { CreateassignmentComponent } from './createassignment/createassignment.c
 import { ViewsubmissionComponent } from './viewsubmission/viewsubmission.component';
 import { SubmitassignmentsComponent } from './submitassignments/submitassignments.component';
 import { EvaluatesubmissionComponent } from './evaluatesubmission/evaluatesubmission.component';
+import { TrainerprojectsComponent } from './trainerprojects/trainerprojects.component';
+import { CreateprojectComponent } from './createproject/createproject.component';
+import { ViewprojectsubmissionComponent } from './viewprojectsubmission/viewprojectsubmission.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,10 @@ import { EvaluatesubmissionComponent } from './evaluatesubmission/evaluatesubmis
     CreateassignmentComponent,
     ViewsubmissionComponent,
     SubmitassignmentsComponent,
-    EvaluatesubmissionComponent
+    EvaluatesubmissionComponent,
+    TrainerprojectsComponent,
+    CreateprojectComponent,
+    ViewprojectsubmissionComponent
   ],
   imports: [
     BrowserModule,

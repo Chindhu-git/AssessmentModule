@@ -32,7 +32,7 @@ export class CreateassignmentComponent implements OnInit {
       {
         this.message=data;
       }
-  });
+    });
   }
 
 }

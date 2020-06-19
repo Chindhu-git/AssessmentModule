@@ -37,5 +37,13 @@ export class TrainerauthorisationService {
   {
     return this.http.post("http://localhost:8080/login/trainer/assignment/evaluate",evaluatesubmission,{responseType: 'text' as 'json'});
   }
+  public saveProjects(createProject)
+  {
+    return this.http.post("http://localhost:8080/login/trainer/project/create",createProject,{responseType: 'text' as 'json'});
+  }
+  public showProjects(email: string)
+  {
+    return this.http.get<any>("http://localhost:8080/login/trainer/project/show/"+email); 
+  }
 }
  

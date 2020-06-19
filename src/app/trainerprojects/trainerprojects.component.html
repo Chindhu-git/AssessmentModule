@@ -12,11 +12,11 @@
             <a routerLink="/home" routerLinkActive="active" style="float: right;">Logout</a>
             <a style="float: right;">View Performance</a>
             <a routerLink="/login/trainer/trainerprojects" style="float: right;">Projects</a>
-            <a style="float: right;">Assignments</a>
+            <a routerLink="/login/trainer/trainerassignments" routerLinkActive="active"  style="float: right;">Assignments</a>
             <a style="float: right;">Quiz</a>
-            <a routerLink="/login/trainer/trainerprofile" routerLinkActive="active" style="float: right;">Profile</a>
-        </div>  <br>
-        <button type="button" routerLink="/login/trainer/trainerassignments/create" routerLinkActive="active">Create new assignment</button><br>
+            <a style="float: right;">Profile</a>
+        </div>
+        <button type="button" routerLink="/login/trainer/trainerprojects/create" routerLinkActive="active">Create new project</button><br>
         <br>
         <ag-grid-angular
             #mygrid
@@ -30,3 +30,4 @@
         </ag-grid-angular>
     </body>
 </html>
+

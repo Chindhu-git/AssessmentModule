@@ -1,5 +1,4 @@
-
-    <script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"> </script>
+<script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"> </script>
 
     <p id="welcomenote">Welcome {{email}} !!!</p>
     <div class="navbar">
@@ -10,11 +9,14 @@
       <a routerLink="/login/trainer/trainerassignments" routerLinkActive="active"style="float: right;">Assignments</a>
       <a style="float: right;">Quiz</a>
       <a routerLink="/login/trainer/trainerprofile" routerLinkActive="active" style="float: right;">Profile</a>
-    </div>  
+    </div>
+    <p>{{message}}</p>
     <div>
-      <img src="assets/assessment_img.jpg" alt="Workplace">
-      <p>Assessments<br>
-        play a greater<br>
-        part in building<br>
-        an expert</p>
+        <form>
+            Project title<br>
+            <input type="text" class="input_field" name="title" [(ngModel)]="createProject.title" required><br>
+            Project Description<br>
+            <input type="text" class="input_field" name="description" required [(ngModel)]="createProject.description"><br><br>
+            <button type="submit" (click)="saveProjects()" >Save</button><br><br>
+        </form>
     </div>
