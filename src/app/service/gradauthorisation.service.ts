@@ -28,4 +28,12 @@ export class GradauthorisationService {
   {
     return this.http.post("http://localhost:8080/login/grad/assignment/submit",submittedassignment,{responseType:'text' as 'json'});
   }
+  public showProjects()
+  {
+    return this.http.get<any>("http://localhost:8080/login/grad/project/show");
+  }
+  public submitProject(submittedproject)
+  {
+    return this.http.post("http://localhost:8080/login/grad/project/submit",submittedproject,{responseType:'text' as 'json'});
+  }
 }
