@@ -29,6 +29,7 @@ export class SubmitprojectsComponent implements OnInit {
   {
       this.submittedProject.email=this.email;
       this.submittedProject.project_name=this.title;
+      console.log(this.submittedProject.projectlink);
       let resp=this.service.submitProject(this.submittedProject);
       resp.subscribe((data)=>{
         this.message=data;

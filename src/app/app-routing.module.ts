@@ -43,7 +43,7 @@ const routes: Routes = [
   { path: 'login/trainer/trainerprojects/view', component: ViewprojectsubmissionComponent},
   { path: 'login/trainer/trainerprojects/view/evaluate', component: EvaluateprojectComponent},
   { path: 'login/grad/gradprojects', component: GradprojectsComponent},
-  { path: 'login/grad/gradprojects/submit', component: SubmitassignmentsComponent},
+  { path: 'login/grad/gradprojects/submit', component: SubmitprojectsComponent},
   { path: '**', component: PagenotfoundComponent }
 ];
 

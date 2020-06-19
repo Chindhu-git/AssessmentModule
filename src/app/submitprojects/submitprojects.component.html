@@ -19,7 +19,7 @@
   <form>
     <h5>Drop Link</h5>
     <p style="font-style: normal; font-size: 70%;">Upload your project in Git and drop the link</p><br>
-    Link: <input type="text" class="projectlink" required [(ngModel)]="submittedProject.projectlink"><br><br>
+    <p>Link: <input type="text" name="projectlink" [(ngModel)]="submittedProject.projectlink" required></p><br><br>
     <button type="submit" (click)="uploadNow()" >Submit</button><br><br>
   </form>    
 </div>

@@ -47,7 +47,7 @@ export class TrainerauthorisationService {
   }
   public viewProjects(project_name:string)
   {
-    return this.http.get<any>("http://localhost:8080/login/trainer/assignment/view/"+project_name); 
+    return this.http.get<any>("http://localhost:8080/login/trainer/project/view/"+project_name); 
   }
 }
  
