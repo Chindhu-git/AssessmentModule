@@ -27,6 +27,7 @@ import { EvaluatesubmissionComponent } from './evaluatesubmission/evaluatesubmis
 import { TrainerprojectsComponent } from './trainerprojects/trainerprojects.component';
 import { CreateprojectComponent } from './createproject/createproject.component';
 import { ViewprojectsubmissionComponent } from './viewprojectsubmission/viewprojectsubmission.component';
+import { EvaluateprojectComponent } from './evaluateproject/evaluateproject.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { ViewprojectsubmissionComponent } from './viewprojectsubmission/viewproj
     EvaluatesubmissionComponent,
     TrainerprojectsComponent,
     CreateprojectComponent,
-    ViewprojectsubmissionComponent
+    ViewprojectsubmissionComponent,
+    EvaluateprojectComponent
   ],
   imports: [
     BrowserModule,

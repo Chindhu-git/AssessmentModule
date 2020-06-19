@@ -18,6 +18,7 @@ import {EvaluatesubmissionComponent} from './evaluatesubmission/evaluatesubmissi
 import {TrainerprojectsComponent} from './trainerprojects/trainerprojects.component';
 import {CreateprojectComponent} from './createproject/createproject.component';
 import {ViewprojectsubmissionComponent} from './viewprojectsubmission/viewprojectsubmission.component';
+import {EvaluateprojectComponent} from './evaluateproject/evaluateproject.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -38,6 +39,7 @@ const routes: Routes = [
   { path: 'login/trainer/trainerprojects', component: TrainerprojectsComponent},
   { path: 'login/trainer/trainerprojects/create', component: CreateprojectComponent},
   { path: 'login/trainer/trainerprojects/view', component: ViewprojectsubmissionComponent},
+  { path: 'login/trainer/trainerprojects/view/evaluate', component: EvaluatesubmissionComponent},
   { path: '**', component: PagenotfoundComponent }
 ];
 
