@@ -2,7 +2,7 @@
     color: #daa520;
     font-size: 100%;
     font-family: none;
-    font-variant: none;
+    font-weight: bold;
     font-style: italic;
     top: 25px;
     left: 1000px;
@@ -40,16 +40,6 @@
       top : 250px;
       position: absolute;
   }
-  .button {
-    background-color: black; 
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-  }
   form{
     text-align: left;
     font-family: sans-serif;
@@ -74,6 +64,7 @@
   button
   {
     background-color:goldenrod;
+    border-radius: 8px;
     border: none;
     color: white;
     padding: 10px 20px;
