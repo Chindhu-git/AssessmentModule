@@ -33,6 +33,7 @@ import { SubmitprojectsComponent } from './submitprojects/submitprojects.compone
 import { TrainerquizComponent } from './trainerquiz/trainerquiz.component';
 import { CreatequizComponent } from './createquiz/createquiz.component';
 import { AddquestionsComponent } from './addquestions/addquestions.component';
+import { ViewquizsubmissionComponent } from './viewquizsubmission/viewquizsubmission.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { AddquestionsComponent } from './addquestions/addquestions.component';
     SubmitprojectsComponent,
     TrainerquizComponent,
     CreatequizComponent,
-    AddquestionsComponent
+    AddquestionsComponent,
+    ViewquizsubmissionComponent
   ],
   imports: [
     BrowserModule,

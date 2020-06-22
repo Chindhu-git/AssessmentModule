@@ -39,5 +39,10 @@ export class TrainerquizComponent implements OnInit {
       ];
     });
   }
-
+  public onRowClicked(event)
+  {
+    sessionStorage.setItem('loggedEmail', event.data.email);
+    sessionStorage.setItem('loggedTitle', event.data.title);
+    this.router.navigateByUrl('/login/trainer/trainerquiz/view');
+  }
 }

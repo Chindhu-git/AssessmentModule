@@ -24,6 +24,7 @@ import {SubmitprojectsComponent} from './submitprojects/submitprojects.component
 import {TrainerquizComponent} from './trainerquiz/trainerquiz.component';
 import {CreatequizComponent} from './createquiz/createquiz.component';
 import {AddquestionsComponent} from './addquestions/addquestions.component';
+import {ViewquizsubmissionComponent} from './viewquizsubmission/viewquizsubmission.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -50,6 +51,7 @@ const routes: Routes = [
   { path: 'login/trainer/trainerquiz', component: TrainerquizComponent},
   { path: 'login/trainer/trainerquiz/create', component: CreatequizComponent},
   { path: 'login/trainer/trainerquiz/add', component: AddquestionsComponent},
+  { path: 'login/trainer/trainerquiz/view', component: ViewquizsubmissionComponent},
   { path: '**', component: PagenotfoundComponent }
 ];
 
