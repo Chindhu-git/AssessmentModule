@@ -32,6 +32,7 @@ import { GradprojectsComponent } from './gradprojects/gradprojects.component';
 import { SubmitprojectsComponent } from './submitprojects/submitprojects.component';
 import { TrainerquizComponent } from './trainerquiz/trainerquiz.component';
 import { CreatequizComponent } from './createquiz/createquiz.component';
+import { AddquestionsComponent } from './addquestions/addquestions.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { CreatequizComponent } from './createquiz/createquiz.component';
     GradprojectsComponent,
     SubmitprojectsComponent,
     TrainerquizComponent,
-    CreatequizComponent
+    CreatequizComponent,
+    AddquestionsComponent
   ],
   imports: [
     BrowserModule,
