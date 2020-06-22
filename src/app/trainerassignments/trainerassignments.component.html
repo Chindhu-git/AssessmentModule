@@ -13,12 +13,12 @@
             <a style="float: right;">View Performance</a>
             <a routerLink="/login/trainer/trainerprojects" style="float: right;">Projects</a>
             <a style="float: right;">Assignments</a>
-            <a style="float: right;">Quiz</a>
+            <a routerLink="/login/trainer/trainerquiz" style="float: right;">Quiz</a>
             <a routerLink="/login/trainer/trainerprofile" routerLinkActive="active" style="float: right;">Profile</a>
         </div>  <br>
-        <button type="button" routerLink="/login/trainer/trainerassignments/create" routerLinkActive="active">Create new assignment</button><br>
+        <button type="button" routerLink="/login/trainer/trainerquiz/create" routerLinkActive="active">Create new assignment</button><br>
         <br>
-        <ag-grid-angular
+        <!--ag-grid-angular
             #mygrid
             style="width: 600px; height: 300px;"
             class="ag-theme-alpine"
@@ -27,6 +27,6 @@
             rowSelection="single"
             (rowClicked)="onRowClicked($event)"
             >
-        </ag-grid-angular>
+        </ag-grid-angular-->
     </body>
 </html>

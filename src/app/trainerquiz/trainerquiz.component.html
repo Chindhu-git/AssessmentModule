@@ -1,6 +1,10 @@
-
+<!DOCTYPE html>
+<head>
     <script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"> </script>
-
+    <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css">
+    <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-theme-alpine.css">
+</head>
+<body>
     <p id="welcomenote">Welcome {{email}} !!!</p>
     <div class="navbar">
       <a class="pagename" style="font-size:150%">Trainer</a>
@@ -10,11 +14,17 @@
       <a routerLink="/login/trainer/trainerassignments" routerLinkActive="active"style="float: right;">Assignments</a>
       <a routerLink="/login/trainer/trainerquiz" style="float: right;">Quiz</a>
       <a routerLink="/login/trainer/trainerprofile" routerLinkActive="active" style="float: right;">Profile</a>
-    </div>  
-    <div>
-      <img src="assets/assessment_img.jpg" alt="Workplace">
-      <p>Assessments<br>
-        play a greater<br>
-        part in building<br>
-        an expert</p>
-    </div>
+    </div> 
+    <button type="button" routerLink="/login/trainer/trainerassignments/create" routerLinkActive="active">Create new Quiz</button><br>
+    <br>
+    <ag-grid-angular
+        #mygrid
+        style="width: 600px; height: 300px;"
+        class="ag-theme-alpine"
+        [rowData]="rowData"
+        [columnDefs]="columnDefs"
+        rowSelection="single"
+        (rowClicked)="onRowClicked($event)">
+    </ag-grid-angular>
+</body>
+    

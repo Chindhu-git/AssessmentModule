@@ -24,7 +24,7 @@ export class EvaluateprojectComponent implements OnInit {
     this.email=sessionStorage.getItem('loggedEmail');
     this.title=sessionStorage.getItem('loggedTitle');
     this.grademail=sessionStorage.getItem('UploadedEmail');
-    this.projectlink=sessionStorage.getItem('UploadedProjectLink');
+    this.projectlink=sessionStorage.getItem('UploadedProjectlink');
     this.score=sessionStorage.getItem('UploadedScore');
     this.isReadOnly=true;
   }
