@@ -57,5 +57,9 @@ export class TrainerauthorisationService {
   {
     return this.http.post("http://localhost:8080/login/trainer/quiz/create",createQuiz,{responseType: 'text' as 'json'});
   }
+  public showQuiz(email: string)
+  {
+    return this.http.get<any>("http://localhost:8080/login/trainer/quiz/show/"+email); 
+  }
 }
  
