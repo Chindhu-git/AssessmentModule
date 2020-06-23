@@ -26,6 +26,7 @@ export class GradviewperformanceComponent implements OnInit {
   {
     let resp=this.service.showPerformance(this.email);
     resp.subscribe((data :any[])=>{
+      console.log(data);
       this.gradViewPerformance=data;
       
       for(let gradViewPerformances of this.gradViewPerformance)
