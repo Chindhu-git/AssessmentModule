@@ -57,6 +57,7 @@ button
     text-decoration: none;
     font-size: 20px;
     font-style: italic;
+    font-family: none;
   }
 .navbar a:hover {
     background: #ddd;

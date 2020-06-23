@@ -10,6 +10,7 @@ export class AddquestionsComponent implements OnInit {
 
   public email: string;
   constructor() { }
+  
 
   ngOnInit(): void {
     this.email=sessionStorage.getItem('loggedTrainer');
