@@ -35,6 +35,8 @@ import { CreatequizComponent } from './createquiz/createquiz.component';
 import { AddquestionsComponent } from './addquestions/addquestions.component';
 import { ViewquizsubmissionComponent } from './viewquizsubmission/viewquizsubmission.component';
 import { GradviewperformanceComponent } from './gradviewperformance/gradviewperformance.component';
+import { GradquizComponent } from './gradquiz/gradquiz.component';
+import { SubmitquizComponent } from './submitquiz/submitquiz.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +66,9 @@ import { GradviewperformanceComponent } from './gradviewperformance/gradviewperf
     CreatequizComponent,
     AddquestionsComponent,
     ViewquizsubmissionComponent,
-    GradviewperformanceComponent
+    GradviewperformanceComponent,
+    GradquizComponent,
+    SubmitquizComponent
   ],
   imports: [
     BrowserModule,

@@ -26,6 +26,8 @@ import {CreatequizComponent} from './createquiz/createquiz.component';
 import {AddquestionsComponent} from './addquestions/addquestions.component';
 import {ViewquizsubmissionComponent} from './viewquizsubmission/viewquizsubmission.component';
 import {GradviewperformanceComponent} from './gradviewperformance/gradviewperformance.component';
+import {GradquizComponent} from './gradquiz/gradquiz.component';
+import {SubmitquizComponent} from './submitquiz/submitquiz.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -54,6 +56,8 @@ const routes: Routes = [
   { path: 'login/trainer/trainerquiz/add', component: AddquestionsComponent},
   { path: 'login/trainer/trainerquiz/view', component: ViewquizsubmissionComponent},
   { path: 'login/grad/gradviewperformance', component: GradviewperformanceComponent},
+  { path: 'login/grad/gradquiz', component: GradquizComponent},
+  { path: 'login/grad/gradquiz/submit', component: SubmitquizComponent},
   { path: '**', component: PagenotfoundComponent }
 ];
 

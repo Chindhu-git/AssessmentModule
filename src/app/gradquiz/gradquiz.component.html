@@ -10,17 +10,18 @@
     <a routerLink="/home" routerLinkActive="active" style="float: right;">Logout</a>
     <a routerLink="/login/grad/gradviewperformance" style="float: right;">View Performance</a>
     <a routerLink="/login/grad/gradprojects" style="float: right;">Projects</a>
-    <a routerLink="login/grad/gradassignments" routerLinkActive="active"  style="float: right;">Assignments</a>
+    <a routerLink="/login/grad/gradassignments" routerLinkActive="active"  style="float: right;">Assignments</a>
     <a routerLink="/login/grad/gradquiz" style="float: right;">Quiz</a>
     <a routerLink="/login/grad/gradprofile" routerLinkActive="active" style="float: right;">Profile</a>
 </div>  
 <br>
 <ag-grid-angular
     #mygrid
-    style="width: 600px; height: 300px; font-family:Arial, Helvetica, sans-serif"
+    style="width: 400px; height: 300px; font-family:Arial, Helvetica, sans-serif"
     class="ag-theme-alpine"
     [rowData]="rowData"
     [columnDefs]="columnDefs"
-    rowSelection="single">
+    rowSelection="single"
+    (rowClicked)="onRowClicked($event)">
 </ag-grid-angular>
 </body>

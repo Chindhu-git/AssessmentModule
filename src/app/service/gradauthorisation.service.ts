@@ -40,4 +40,8 @@ export class GradauthorisationService {
   {
     return this.http.get<any>("http://localhost:8080/login/grad/showperformance/"+email);
   }
+  public showQuiz()
+  {
+    return this.http.get<any>("http://localhost:8080/login/grad/quiz/show");
+  }
 }
