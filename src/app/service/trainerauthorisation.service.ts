@@ -61,5 +61,9 @@ export class TrainerauthorisationService {
   {
     return this.http.get<any>("http://localhost:8080/login/trainer/quiz/show/"+email); 
   }
+  public addQue(addQuestions)
+  {
+    return this.http.post("http://localhost:8080/login/trainer/quiz/add",addQuestions,{responseType: 'text' as 'json'});
+  }
 }
  

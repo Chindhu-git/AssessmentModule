@@ -15,7 +15,23 @@
       <a routerLink="/login/trainer/trainerquiz" style="float: right;">Quiz</a>
       <a routerLink="/login/trainer/trainerprofile" routerLinkActive="active" style="float: right;">Profile</a>
     </div> <br><br>
+    <p>{{message}}</p>
     <div>
+      <form>
+        Question <br>
+        <textarea rows="4" cols="50" name="que" [(ngModel)]="addQuestions.que" required></textarea><br><br>
+        Opt (a)<br>
+        <input type="text" name="opta" [(ngModel)]="addQuestions.opta" required><br>
+        Opt (b) <br>
+        <input type="text" name="optb" [(ngModel)]="addQuestions.optb" required><br>
+        Opt (c) <br>
+        <input type="text" name="optc" [(ngModel)]="addQuestions.optc" required><br>
+        Opt (d) <br>
+        <input type="text" name="optd" [(ngModel)]="addQuestions.optd" required><br>
+        Ans <br>
+        <input type="text" name="ans" [(ngModel)]="addQuestions.ans" required><br>
+        <button type="button" (click)="addNow()">Add</button> &nbsp; &nbsp; <button type="submit" (click)="submitNow()">Submit</button>
+      </form>
     </div>
 </body>
 

@@ -21,6 +21,7 @@ export class CreatequizComponent implements OnInit {
   public saveQuiz()
   {
     this.createQuiz.email=this.email;
+    sessionStorage.setItem('UploadedQuiz', this.createQuiz.title);
     let resp=this.service.saveQuiz(this.createQuiz);
     resp.subscribe((data)=>{
       if(data==="Saved Successfully")
