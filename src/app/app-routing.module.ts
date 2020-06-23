@@ -53,7 +53,7 @@ const routes: Routes = [
   { path: 'login/trainer/trainerquiz/create', component: CreatequizComponent},
   { path: 'login/trainer/trainerquiz/add', component: AddquestionsComponent},
   { path: 'login/trainer/trainerquiz/view', component: ViewquizsubmissionComponent},
-  { path: 'login/grad/gradviewperformance', component: GradprofileComponent},
+  { path: 'login/grad/gradviewperformance', component: GradviewperformanceComponent},
   { path: '**', component: PagenotfoundComponent }
 ];
 
