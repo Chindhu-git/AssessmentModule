@@ -70,8 +70,7 @@ import { ViewquizsubmissionComponent } from './viewquizsubmission/viewquizsubmis
     HttpClientModule,
     FormsModule,
     FontAwesomeModule,
-    AgGridModule.withComponents([])
-
+    AgGridModule.withComponents([]),
   ],
   providers: [GradauthorisationService,TrainerauthorisationService],
   bootstrap: [AppComponent]
