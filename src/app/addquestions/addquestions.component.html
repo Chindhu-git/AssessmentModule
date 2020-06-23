@@ -9,7 +9,6 @@
     <div class="navbar">
       <a class="pagename" style="font-size:150%">Trainer</a>
       <a routerLink="/home" routerLinkActive="active" style="float: right;">Logout</a>
-      <a style="float: right;">View Performance</a>
       <a routerLink="/login/trainer/trainerprojects" style="float: right;">Projects</a>
       <a routerLink="/login/trainer/trainerassignments" routerLinkActive="active"style="float: right;">Assignments</a>
       <a routerLink="/login/trainer/trainerquiz" style="float: right;">Quiz</a>
@@ -19,18 +18,18 @@
     <div>
       <form>
         Question <br>
-        <textarea rows="4" cols="50" name="que" [(ngModel)]="addQuestions.que" required></textarea><br><br>
-        Opt (a)<br>
-        <input type="text" name="opta" [(ngModel)]="addQuestions.opta" required><br>
-        Opt (b) <br>
-        <input type="text" name="optb" [(ngModel)]="addQuestions.optb" required><br>
-        Opt (c) <br>
-        <input type="text" name="optc" [(ngModel)]="addQuestions.optc" required><br>
-        Opt (d) <br>
-        <input type="text" name="optd" [(ngModel)]="addQuestions.optd" required><br>
-        Ans <br>
-        <input type="text" name="ans" [(ngModel)]="addQuestions.ans" required><br>
-        <button type="button" (click)="addNow()">Add</button> &nbsp; &nbsp; <button type="submit" (click)="submitNow()">Submit</button>
+        <textarea rows="4" cols="35" name="que" [(ngModel)]="addQuestions.que" required></textarea><br><br>
+        (a) &nbsp;
+        <input type="text" name="opta" class="input_field" [(ngModel)]="addQuestions.opta" required><br><br>
+        (b) &nbsp;
+        <input type="text" name="optb" class="input_field" [(ngModel)]="addQuestions.optb" required><br><br>
+        (c) &nbsp;
+        <input type="text" name="optc" class="input_field" [(ngModel)]="addQuestions.optc" required><br><br>
+        (d) &nbsp;
+        <input type="text" name="optd" class="input_field" [(ngModel)]="addQuestions.optd" required><br><br>
+        Ans
+        <input type="text" name="ans" class="input_field" [(ngModel)]="addQuestions.ans" required><br><br>
+        <button type="button" (click)="addNow()">Add</button> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<button type="submit" (click)="submitNow()">Submit</button><br>
       </form>
     </div>
 </body>

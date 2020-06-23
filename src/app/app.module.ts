@@ -34,6 +34,7 @@ import { TrainerquizComponent } from './trainerquiz/trainerquiz.component';
 import { CreatequizComponent } from './createquiz/createquiz.component';
 import { AddquestionsComponent } from './addquestions/addquestions.component';
 import { ViewquizsubmissionComponent } from './viewquizsubmission/viewquizsubmission.component';
+import { GradviewperformanceComponent } from './gradviewperformance/gradviewperformance.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { ViewquizsubmissionComponent } from './viewquizsubmission/viewquizsubmis
     TrainerquizComponent,
     CreatequizComponent,
     AddquestionsComponent,
-    ViewquizsubmissionComponent
+    ViewquizsubmissionComponent,
+    GradviewperformanceComponent
   ],
   imports: [
     BrowserModule,

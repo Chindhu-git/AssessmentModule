@@ -22,6 +22,7 @@ export class AddquestionsComponent implements OnInit {
   }
   public addNow()
   {
+    //console.log(this.addQuestions);
     let resp=this.service.addQue(this.addQuestions);
     resp.subscribe((data)=>{
       if(data==="Uploaded Successfully")

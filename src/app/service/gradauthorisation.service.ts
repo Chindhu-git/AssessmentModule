@@ -36,4 +36,8 @@ export class GradauthorisationService {
   {
     return this.http.post("http://localhost:8080/login/grad/project/submit",submittedproject,{responseType:'text' as 'json'});
   }
+  public showPerformance(email:string)
+  {
+    return this.http.get<any>("http://localhost:8080/login/grad/showperformance/"+email);
+  }
 }
